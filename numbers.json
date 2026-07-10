@@ -1,0 +1,18 @@
+import json
+import random
+
+numbers = []
+
+for i in range(100000):
+    num = "+888" + str(random.randint(10000000, 99999999))
+
+    numbers.append({
+        "number": num,
+        "user": None,
+        "code": None
+    })
+
+with open("numbers.json", "w", encoding="utf-8") as f:
+    json.dump(numbers, f, indent=4)
+
+print("100 000 LuxoraGram numbers created!")
